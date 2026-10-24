@@ -2,9 +2,9 @@
 
 > An autonomous agent that upgrades an entire Python codebase across a breaking library/language version change — mapping every affected call site with a dependency graph, planning a safe edit order, and running a test-driven self-correction loop until the suite passes.
 
-**Status:** Academic major project (in development) · **Centre:** AI & ML · **Guide:** Dr Nimrita Koul · **Author:** Srinivas RC
+**Status:** Academic major project (in development) · **Centre:** AI & ML · **Guide:** Dr Nimrita Koul · **Team:** Srinivas R C, Verril Vaz, Adithya Naik, Prajwal Ragavendra Hawaldar, Prabanjan R (roles and ownership in [CONTRIBUTORS.md](CONTRIBUTORS.md))
 
-<!-- Badges (fill in once CI exists): build · coverage · python 3.12 · license -->
+[![ci](https://github.com/Codebase-Wide-Migration/codebase-wide-Python-version-migration/actions/workflows/ci.yml/badge.svg)](https://github.com/Codebase-Wide-Migration/codebase-wide-Python-version-migration/actions/workflows/ci.yml)
 
 ---
 

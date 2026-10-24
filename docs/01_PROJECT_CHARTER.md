@@ -6,7 +6,7 @@
 | **Document** | Project Synopsis / Charter (Deliverable D1) |
 | **Project title** | Codebase-Wide Version Migration & Refactoring Agent |
 | **Internal handle** | MRA (Migration & Refactoring Agent) |
-| **Author / Student** | Srinivas RC |
+| **Team** | Srinivas R C (R23EA121), Verril Vaz (R23EN179), Adithya Naik (R23EF014), Prajwal Ragavendra Hawaldar (R23EF183), Prabanjan R (R23EF181); see `CONTRIBUTORS.md` |
 | **Guide** | Dr Nimrita Koul |
 | **Centre** | Centre for AI & ML |
 | **Version** | 0.1 (Draft for guide review) |
@@ -18,12 +18,17 @@
 | Ver | Date | Author | Change |
 |---|---|---|---|
 | 0.1 | 24 Aug 2026 | Srinivas RC | Initial draft for first guide meeting |
+| 0.2 | 24 Oct 2026 | Team | Project became a five-member team project; team and workstreams recorded in `CONTRIBUTORS.md` |
 
 **Approval**
 
 | Role | Name | Signature | Date |
 |---|---|---|---|
 | Student | Srinivas RC | | |
+| Student | Verril Vaz | | |
+| Student | Adithya Naik | | |
+| Student | Prajwal Ragavendra Hawaldar | | |
+| Student | Prabanjan R | | |
 | Guide | Dr Nimrita Koul | | |
 
 ---
