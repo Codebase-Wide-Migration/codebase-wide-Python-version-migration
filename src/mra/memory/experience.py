@@ -33,6 +33,8 @@ import json
 import os
 import re
 import sqlite3
+from collections.abc import Iterator
+from contextlib import contextmanager
 from datetime import UTC, datetime, timedelta
 from difflib import SequenceMatcher
 from pathlib import Path
@@ -146,11 +148,22 @@ class ExperienceStore:
         self.readonly = readonly
         self.ttl_days = ttl_days
 
-    def _connect(self) -> sqlite3.Connection:
+    @contextmanager
+    def _connect(self) -> Iterator[sqlite3.Connection]:
+        """A connection that commits (or rolls back) and is always closed.
+
+        ``with sqlite3.connect(...)`` only ends the transaction; the file stays
+        open until garbage collection, and Windows refuses to delete an open
+        file, so :meth:`purge` failed there.
+        """
         self.path.parent.mkdir(parents=True, exist_ok=True)
         connection = sqlite3.connect(self.path)
-        connection.executescript(SCHEMA)
-        return connection
+        try:
+            connection.executescript(SCHEMA)
+            with connection:
+                yield connection
+        finally:
+            connection.close()
 
     def _cutoff(self) -> str:
         return (datetime.now(UTC) - timedelta(days=self.ttl_days)).isoformat(timespec="seconds")
